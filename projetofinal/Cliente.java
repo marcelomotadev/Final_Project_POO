@@ -4,33 +4,31 @@ import java.util.ArrayList;
  */
 public class Cliente {
   private String name; //nome cliente
-  private int clientNumber; // numero de contato do cliente
   private ArrayList<String> clientFavRestaurants; // restaurantes favoritos
+  private String email; // email do usuario
   private int id; //id de identificação do cliente
-  private ArrayList<Compra> comprasFeitas;
+  private ArrayList<Carrinho> pedidos; //histórico de pedidos
 
-  public Cliente(String nome, int telefone, int id){
+  public Cliente(String nome, int id, String email){
+	this.email = email;
     this.name = nome;
-    this.clientNumber = telefone;
     clientFavRestaurants = new ArrayList<>();
-    comprasFeitas = new ArrayList<>();
+    pedidos = new ArrayList<>();
     this.id = id;
   }
 
+  public String getEmail() {
+	  return email;
+  }
 
   public String getName(){
     return name;
   }
 
-
-  public int getNumber(){
-    return clientNumber;
-  }
-
   public int getId(){
     return id;
   }
-
+  
   public void addFav(String restaurant){
     clientFavRestaurants.add(restaurant);
   }
@@ -42,14 +40,9 @@ public class Cliente {
       System.out.println("erro, o valor da entrada nao consta na lista de restaurante favoritos");
     }
   }
-
-  public void addCompra(Compra compra){
-    comprasFeitas.add(compra);
+  
+  public void addPedido(Carrinho pedido) {
+	  pedidos.add(pedido);
   }
-
-  public ArrayList<Compra> totalCompras(){
-    return comprasFeitas;
-  }
-
   
 }

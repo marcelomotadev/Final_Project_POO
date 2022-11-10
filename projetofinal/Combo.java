@@ -5,9 +5,9 @@ public class Combo extends Item{
     super(nome, descricao, preco);
     this.qtdPessoas = qtdPessoas;
   }
-  
+
+
   public String descricaoQtd() {
     return("Serve " + Integer.toString(qtdPessoas) + " pessoas.");
   }
 }
-
