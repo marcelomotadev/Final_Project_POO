@@ -33,4 +33,4 @@ Item:
 
 Como rodar?
 
-baixa a pasta do projeto e executar o "app.jar"
+bastar realizar o download da pasta do projeto e executar o "app.jar" :D.
